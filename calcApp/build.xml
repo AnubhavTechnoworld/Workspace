@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CalculatorProject" default="test">
+	<target name="test" depends="compile">
+<junit printsummary="on">
+<test name="com.calc.CalculatorTest"/>
+<classpath>
+	<pathelement location="./src/junit-4.12.jar"/>
+	<pathelement location="./src/hamcrest-core-1.3.jar"/>
+	<pathelement location="./staging"/>
+</classpath>
+</junit>
+</target>
+<target name="compile">
+	<javac srcdir="." destdir="./staging" classpath="./src/junit-4.12.jar"/>
+</target>
+</project>
